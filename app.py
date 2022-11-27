@@ -14,7 +14,6 @@ st.markdown('##   ')
 st.header('Online Retail Sales 2016 - 2018')
 st.subheader('Linear regression chart')
 
-filex = 'retailsales2.xlsx'
 df_retail = pd.read_excel('retailsales2.xlsx')
 col_select = st.selectbox('Select a category', df_retail.columns[4:13], index=4)
 
