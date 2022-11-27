@@ -24,7 +24,7 @@ st.plotly_chart(fig)
 
 st.subheader('Bar chart')
 col_chart = st.selectbox('Select a category', df_retail.columns[4:13], index=6)
-fig2 = px.bar(df_retail, x='Date', y=col_chart, width=800, height=500, title="")
+fig2 = px.bar(df_retail, x='Date', y=col_chart, title="")
 st.plotly_chart(fig2)
 
 df_table = pd.read_excel('retailsales2.xlsx', usecols='D, F, G, H, I, J, K')
@@ -52,8 +52,6 @@ elif choose_chart == 'Bar chart':
 
 st.subheader('Cars Sales data table')
 text_input = st.text_input("Enter car manufacturer name")
-vri = df_buyers['Manufacturer'].astype(str).str[:3]
-stri_lower = vri.apply(lambda x: x.lower())
 text_lower = text_input[:3].lower()
 
 if text_input:
